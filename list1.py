@@ -5,7 +5,7 @@ Kenzie assignment: List1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Timothy Reynoso"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -25,9 +25,22 @@ __author__ = "???"
 # Note: python does not have a ++ operator, but += works.
 
 
+#numbr = 0
+#    for word in words:
+#        if word.count(word[0]) >= 2:
+#            return word
+#       if word[0] == word[-1]:
+#           numbr += 1
+#           return numbr
+
 def match_ends(words):
     # your code here
-    return
+    numbr = 0
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            numbr += 1
+    return numbr
+    
 
 
 # B. front_x
@@ -43,7 +56,19 @@ def match_ends(words):
 
 def front_x(words):
     # your code here
-    return
+    x_words = []
+    for word in words:
+        if word[0] == 'x':
+            words.remove(word)
+            x_words.append(word)
+    for word in words:
+        if word[0] == 'x':
+            words.remove(word)
+            x_words.append(word)
+    words.sort()
+    x_words.reverse()
+    x_words.extend(words)
+    return x_words
 
 
 # C. sort_last
@@ -57,7 +82,10 @@ def front_x(words):
 
 def sort_last(tuples):
     # your code here
-    return
+    def my_function(e):
+        return e[-1:]
+    tuples.sort(key=my_function)
+    return tuples
 
 
 # Provided simple test() function used in main() to print
