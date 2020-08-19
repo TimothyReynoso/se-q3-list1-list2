@@ -41,8 +41,6 @@ def match_ends(words):
             numbr += 1
     return numbr
     
-
-
 # B. front_x
 # Given a list of strings, return a list with the strings in
 # sorted order, except group all the strings that begin with
@@ -52,7 +50,6 @@ def match_ends(words):
 #   ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
 # Hint: this can be done by making 2 lists and sorting each
 # of them before combining them.
-
 
 def front_x(words):
     # your code here
@@ -69,7 +66,6 @@ def front_x(words):
     x_words.reverse()
     x_words.extend(words)
     return x_words
-
 
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in

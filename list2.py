@@ -5,7 +5,7 @@ Kenzie assignment: List2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "Timothy Reynoso with help from JT"
+__author__ = "Timothy k Reynoso with help from JT"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -39,7 +39,6 @@ def remove_adjacent(nums):
         new_list.append(nums[-1])
     return new_list
 
-
 # E. zip_merge
 # Given two lists, combine the values from their corresponding
 # indices into a single list.
@@ -49,7 +48,6 @@ def remove_adjacent(nums):
 # Hint: Think of it as "zipping" two lists together.  Is there
 # a built-in function in python that will do this?
 
-
 def zip_merge(list1, list2):
     # your code here
     #for index in range(len(list1))
@@ -58,7 +56,6 @@ def zip_merge(list1, list2):
     for pair in zipp:
         new_list.append("".join(pair))
     return new_list
-
 
 # F. empty_filter
 # Given a single list containing strings, empty strings, and
