@@ -5,7 +5,7 @@ Kenzie assignment: List2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Timothy Reynoso with help from JT"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -26,10 +26,18 @@ __author__ = "???"
 # You may create a new list or modify the passed in list.
 # Hint: Don't use set()
 
-
+#lets loop , if statemnt check delete/remove duplicate
 def remove_adjacent(nums):
-    # your code here
-    return
+    #your code here
+    new_list = []
+    if nums == []:
+        return nums
+    for number in range(len(nums) - 1):
+        if nums[number] != nums[number+1]:
+            new_list.append(nums[number])
+    if nums[-1] != new_list[-1]:
+        new_list.append(nums[-1])
+    return new_list
 
 
 # E. zip_merge
@@ -44,7 +52,12 @@ def remove_adjacent(nums):
 
 def zip_merge(list1, list2):
     # your code here
-    return
+    #for index in range(len(list1))
+    zipp = list(zip(list1, list2))
+    new_list = []
+    for pair in zipp:
+        new_list.append("".join(pair))
+    return new_list
 
 
 # F. empty_filter
@@ -57,8 +70,8 @@ def zip_merge(list1, list2):
 
 
 def empty_filter(list1):
-    # your code here
-    return
+    # your code here 
+    return list(filter(None ,list1))
 
 
 # G. linear_merge
@@ -73,8 +86,11 @@ def empty_filter(list1):
 
 
 def linear_merge(list1, list2):
-    # your code here
-    return
+    # your code here list(zip(list1, lets))
+    new_list = []
+    new_list.extend(sorted(list1)) 
+    new_list.extend(sorted(list2)) 
+    return sorted(new_list)
 
 
 # Provided simple test() function used in main() to print
