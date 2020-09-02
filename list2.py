@@ -84,11 +84,19 @@ def empty_filter(list1):
 
 def linear_merge(list1, list2):
     # your code here list(zip(list1, lets))
-    new_list = []
-    new_list.extend(sorted(list1)) 
-    new_list.extend(sorted(list2)) 
-    return sorted(new_list)
-
+    # new_list = []
+    # new_list.extend(sorted(list1)) 
+    # new_list.extend(sorted(list2)) 
+    # return sorted(new_list)
+    sorted_list = []
+    while list1 and list2:
+        if list1[0] < list2[0]:
+            sorted_list.append(list1.pop(0)) 
+        else:
+            sorted_list.append(list2.pop(0))
+    sorted_list.extend(list1)
+    sorted_list.extend(list2)
+    return sorted_list
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
